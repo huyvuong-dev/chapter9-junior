@@ -2,10 +2,17 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <body>
-    <referenceBlock name="order_items" template="Magenest_Chapter9::order/view/items.phtml">
+    <referenceBlock name="order_items">
         <arguments>
             <argument name="columns" xsi:type="array">
                 <item name="message" xsi:type="string" translate="true">Message</item>
+            </argument>
+        </arguments>
+    </referenceBlock>
+    <referenceBlock name="default_order_items_renderer">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="message" xsi:type="string" translate="true">col-message</item>
             </argument>
         </arguments>
     </referenceBlock>
